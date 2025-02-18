@@ -13,8 +13,8 @@ namespace Assignment_02.Entities
         public int Grade { get; set; }
 
         // Navigation properties
-        //public Student Student { get; set; }
-        //public Course Course { get; set; }
+        public Student Student { get; set; }
+        public Course Course { get; set; }
 
     }
 }

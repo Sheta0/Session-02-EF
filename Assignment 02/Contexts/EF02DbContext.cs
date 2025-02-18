@@ -35,6 +35,29 @@ namespace Assignment_01.Contexts
                         .WithMany(D => D.Instructors)
                         .HasForeignKey(I => I.DepartmentId);
 
+            //modelBuilder.Entity<Course_Inst>()
+            //            .HasOne(ci => ci.Instructor)
+            //            .WithMany(i => i.Courses)
+            //            .HasForeignKey(ci => ci.InstructorId);
+
+            //modelBuilder.Entity<Course_Inst>()
+            //            .HasOne(ci => ci.Course)
+            //            .WithMany(c => c.Instructors)
+            //            .HasForeignKey(ci => ci.CourseId);
+
+            //modelBuilder.Entity<Stud_Course>()
+            //            .HasOne(SC => SC.Student)
+            //            .WithMany(S => S.Courses)
+            //            .HasForeignKey(SC => SC.StudentId);
+
+            //modelBuilder.Entity<Stud_Course>()
+            //            .HasOne(SC => SC.Course)
+            //            .WithMany(C => C.Students)
+            //            .HasForeignKey(SC => SC.CourseId);
+
+
+
+
 
             modelBuilder.ApplyConfiguration(new Stud_CourseConfigurations());
             modelBuilder.ApplyConfiguration(new Course_InstConfigurations());
